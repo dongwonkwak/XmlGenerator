@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "XmlBuilder.h"
 
 /*
 	Foo("Hello", 123, 123.4, "Hi");
@@ -15,10 +15,18 @@
 	MyClass myclass;
 
 	Foo("Hello", 123, 123.4, "Hi", myclass);
-	// Compile Error. Unsupported Ty[e
+	// Compile Error. Unsupported Type
 */
 
 int main(int argc, char* argv[])
 {
+
+	std::string hi = "Hi";
+	foo("Hello", 33, 2.3, hi);
+	
+	struct Myclass {};
+	Myclass myclass;
+
+	foo("Hello", 123, 123.4, "Hi", myclass);
 	return 0;
 }
